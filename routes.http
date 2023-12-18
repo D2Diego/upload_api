@@ -18,9 +18,21 @@ Content-Type: audio/mpeg
 ###
 
 # @name create-transcription
-POST http://localhost:3333/video/b1b16425-6fad-4395-a1b3-35857aa8be47/trasncription
+POST http://localhost:3333/video/2d79ebb1-e086-4503-8306-59cfd35fd7ed/trasncription
 Content-Type: application/json
 
 {
     "prompt": "agradecimento a rocketseat"
+}
+
+###
+
+# @name genarate-ai-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "2d79ebb1-e086-4503-8306-59cfd35fd7ed",
+    "temperature": 0.5,
+    "template": "traduza para inglês: '''{transcripiton}''' "
 }
