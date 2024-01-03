@@ -18,7 +18,7 @@ Content-Type: audio/mpeg
 ###
 
 # @name create-transcription
-POST http://localhost:3333/video/2d79ebb1-e086-4503-8306-59cfd35fd7ed/trasncription
+POST http://localhost:3333/video/254cf93f-4923-4b5a-892e-ea8f7d9517be/trasncription
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ POST http://localhost:3333/ai/complete
 Content-Type: application/json
 
 {
-    "videoId": "2d79ebb1-e086-4503-8306-59cfd35fd7ed",
+    "videoId": "254cf93f-4923-4b5a-892e-ea8f7d9517be",
     "temperature": 0.5,
-    "template": "traduza para inglês: '''{transcripiton}''' "
+    "template": "o que significa o ratata: '''{transcripiton}''' "
 }
