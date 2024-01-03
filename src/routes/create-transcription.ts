@@ -1,13 +1,13 @@
 import { FastifyInstance } from "fastify";
-import { z } from 'zod'
 import { createReadStream } from "node:fs";
+import { z } from "zod";
 import { prisma } from "../lib/prisma";
-import { openai } from '../lib/openai'
+import { openai } from "../lib/openai";
 
-export async function createTrasncripitonRoute(app: FastifyInstance) {
-    app.post('/video/:videoId/trasncription', async (req) => {
+export async function createTranscriptionRoute(app: FastifyInstance) {
+    app.post('/videos/:videoId/transcription', async (req) => {
         const paramsSchema = z.object({
-            videoId: z.string().uuid()
+            videoId: z.string().uuid(),
         })
 
         const { videoId } = paramsSchema.parse(req.params)
@@ -44,9 +44,11 @@ export async function createTrasncripitonRoute(app: FastifyInstance) {
             },
             data: {
                 transcription,
-            },
+            }
         })
 
-        return { transcription }
+        return {
+            transcription,
+        }
     })
 }

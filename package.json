@@ -13,6 +13,7 @@
     "@fastify/multipart": "^8.0.0",
     "@prisma/client": "^5.7.0",
     "@types/node": "^20.10.4",
+    "ai": "^2.2.31",
     "fastify": "^4.24.3",
     "openai": "^4.23.0",
     "tsx": "^4.6.2",

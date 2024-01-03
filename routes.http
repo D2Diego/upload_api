@@ -34,5 +34,5 @@ Content-Type: application/json
 {
     "videoId": "254cf93f-4923-4b5a-892e-ea8f7d9517be",
     "temperature": 0.5,
-    "template": "o que significa o ratata: '''{transcripiton}''' "
+    "prompt": "o que significa o ratata: '''{transcripiton}''' "
 }

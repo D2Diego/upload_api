@@ -1,23 +1,23 @@
-import { fastify } from 'fastify'
+import { fastify } from "fastify";
 import { fastifyCors } from '@fastify/cors'
-import { getAllPromptsRoute } from './routes/get-all-prompts'
-import { uploadVideoRoute } from './routes/upload-videos'
-import { createTrasncripitonRoute } from './routes/create-transcription'
-import { generateAICompletionRoute } from './routes/generate-ai-completion'
+import { getAllPromptsRoute } from "./routes/get-all-prompts";
+import { uploadVideoRoute } from "./routes/upload-videos";
+import { createTranscriptionRoute } from "./routes/create-transcription";
+import { generateAiCompletionRoute } from "./routes/generate-ai-completion";
 
 const app = fastify()
 
 app.register(fastifyCors, {
-    origin: '*',
+    origin: '*'
 })
 
 app.register(getAllPromptsRoute)
 app.register(uploadVideoRoute)
-app.register(createTrasncripitonRoute)
-app.register(generateAICompletionRoute)
+app.register(createTranscriptionRoute)
+app.register(generateAiCompletionRoute)
 
 app.listen({
-    port: 3333,
+    port: 3333
 }).then(() => {
-    console.log('HTTP Server Running')
+    console.log('HTTP Server Running!')
 })
